@@ -58,6 +58,8 @@ namespace Part_1
         //List for users
         List<string> userList = new List<string>();
 
+        //***************************************************************************************
+
         //Dictionaries for CallNumbers and Descriptions
         public static Dictionary<string, string> areas = new Dictionary<string, string>();
         public static Dictionary<string, string> areasSwitch = new Dictionary<string, string>();
@@ -77,7 +79,11 @@ namespace Part_1
         public static List<string> Descripts = new List<string>();
 
         //Variable for random evaluation
-        public static int turn = rnd.Next(0, 100); 
+        public static int turn = rnd.Next(0, 100);
+
+        //Variable for Gamifictaion
+        public static int rounds = 0;
+        public static int points = 0;
 
 
         //Sorting method for List
@@ -292,6 +298,15 @@ namespace Part_1
 
         private void btnStart_Click(object sender, RoutedEventArgs e)
         {
+            //Incrementing the rounds counter
+            rounds++;
+
+            //Clearing all Collections
+            callNums.Clear();
+            Descripts.Clear();
+            ranCallNums.Clear();
+            ranDescripts.Clear();
+
             //Pupulating the default lists for
             foreach (string keys in areas.Keys)
             {
@@ -338,6 +353,13 @@ namespace Part_1
 
             
 
+        }
+
+        private void btnMove_Click(object sender, RoutedEventArgs e)
+        {
+            lstResult.Items.Add(lstCallNums.SelectedItem + ": " + lstDescriptions.SelectedItem);
+            lstCallNums.Items.Remove(lstCallNums.SelectedItem);
+            lstDescriptions.Items.Remove(lstDescriptions.SelectedItem);
         }
     }
 }
