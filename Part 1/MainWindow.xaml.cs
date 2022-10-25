@@ -287,30 +287,40 @@ namespace Part_1
 
         public static void startTest()
         {
+
+        } 
+
+        private void btnStart_Click(object sender, RoutedEventArgs e)
+        {
             //Pupulating the default lists for
             foreach (string item in areas.Keys)
             {
                 callNums.Add(item);
             }
 
-            foreach(string item in areas.Values)
+            foreach (string item in areas.Values)
             {
                 Descripts.Add(item);
             }
 
-            if (turn%2 == 0)
-            {
-                int randomz = rand;
-                for (int i =0; i < callNums.Count; i++)
+           
+                int randomz = rnd.Next(0, callNums.Count);
+                int randz;
+                int counter = 1;
+                while (counter <= 4)
                 {
-
+                    randz = rnd.Next(0, callNums.Count);
+                    ranCallNums.Add(callNums[randz]);
+                    callNums.Remove(callNums[randz]);
+                    counter++;
                 }
-            }
-        } 
 
-        private void btnStart_Click(object sender, RoutedEventArgs e)
-        {
-            startTest();
+                foreach (string calls in ranCallNums)
+                {
+                    lstCallNums.Items.Add(calls);
+                }
+
+            
 
         }
     }
