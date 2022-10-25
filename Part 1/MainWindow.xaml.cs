@@ -34,16 +34,16 @@ namespace Part_1
             areas.Add("900", "History and Geography");
 
             //Dictionary for Descriptions and Call Numbers
-            areas.Add("General Knowledge", "000");
-            areas.Add("Philosophy and Psychology", "100");
-            areas.Add("Religion", "200");
-            areas.Add("Social Sciences", "300");
-            areas.Add("Languages", "400");
-            areas.Add("Science", "500");
-            areas.Add("Technology", "600");
-            areas.Add("Arts and Recreation", "700");
-            areas.Add("Literature", "800");
-            areas.Add("History and Geography", "900");
+            areasSwitch.Add("General Knowledge", "000");
+            areasSwitch.Add("Philosophy and Psychology", "100");
+            areasSwitch.Add("Religion", "200");
+            areasSwitch.Add("Social Sciences", "300");
+            areasSwitch.Add("Languages", "400");
+            areasSwitch.Add("Science", "500");
+            areasSwitch.Add("Technology", "600");
+            areasSwitch.Add("Arts and Recreation", "700");
+            areasSwitch.Add("Literature", "800");
+            areasSwitch.Add("History and Geography", "900");
         }
 
         //List for Call Numbers
@@ -293,32 +293,48 @@ namespace Part_1
         private void btnStart_Click(object sender, RoutedEventArgs e)
         {
             //Pupulating the default lists for
-            foreach (string item in areas.Keys)
+            foreach (string keys in areas.Keys)
             {
-                callNums.Add(item);
+                callNums.Add(keys);
             }
 
-            foreach (string item in areas.Values)
+            foreach (string vals in areas.Values)
             {
-                Descripts.Add(item);
+                Descripts.Add(vals);
             }
 
            
                 int randomz = rnd.Next(0, callNums.Count);
                 int randz;
                 int counter = 1;
+                int count = 1;
                 while (counter <= 4)
                 {
                     randz = rnd.Next(0, callNums.Count);
                     ranCallNums.Add(callNums[randz]);
                     callNums.Remove(callNums[randz]);
+                    ranDescripts.Add(Descripts[randz]);
+                    Descripts.Remove(Descripts[randz]);
                     counter++;
+                }
+
+                while (count <= 3)
+                {
+                    randz = rnd.Next(0, Descripts.Count);
+                    Descripts.Remove(Descripts[randz]);
+                    ranDescripts.Add(Descripts[randz]);
+                    count++;
                 }
 
                 foreach (string calls in ranCallNums)
                 {
                     lstCallNums.Items.Add(calls);
                 }
+
+            foreach (string desc in ranDescripts)
+            {
+                lstDescriptions.Items.Add(desc);
+            }
 
             
 
