@@ -101,9 +101,9 @@
                     <Button x:Name="btnIdentifyHelp" Grid.Column="2" Content="?" HorizontalAlignment="Left" Margin="623,22,0,0" VerticalAlignment="Top" Height="35" Width="35" Background="#FFB5B5B5" FontFamily="Arial Black" FontWeight="Bold" Click="btnIdentifyHelp_Click"/>
                     <ListBox x:Name="lstCallNums" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,22,584,184" Grid.ColumnSpan="3"/>
                     <ListBox x:Name="lstDescriptions" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="187,22,297,184" Grid.Column="2"/>
-                    <Button x:Name="btnStart" Grid.Column="2" Content="Start" HorizontalAlignment="Left" Margin="419,22,0,0" VerticalAlignment="Top" Background="#FF36B2DC" BorderBrush="#FF36B2DC" Height="35" Width="165" Foreground="White" Click="btnStart_Click"/>
+                    <Button x:Name="btnStart" Grid.Column="2" Content="Start New Test" HorizontalAlignment="Left" Margin="419,22,0,0" VerticalAlignment="Top" Background="#FF36B2DC" BorderBrush="#FF36B2DC" Height="35" Width="165" Foreground="White" Click="btnStart_Click"/>
                     <Button x:Name="btnMove" Grid.Column="2" Content="Select Answer" HorizontalAlignment="Left" Margin="419,87,0,0" VerticalAlignment="Top" Background="#FF36B2DC" BorderBrush="#FF36B2DC" Foreground="White" Width="165" Height="35"/>
-                    <Button x:Name="btnRedo" Grid.Column="2" Content="Redo Test" HorizontalAlignment="Left" Margin="419,152,0,0" VerticalAlignment="Top" Background="#FF36B2DC" BorderBrush="#FF36B2DC" Foreground="White" Width="165" Height="34"/>
+                    <Button x:Name="btnResullts" Grid.Column="2" Content="Finish" HorizontalAlignment="Left" Margin="419,152,0,0" VerticalAlignment="Top" Background="#FF36B2DC" BorderBrush="#FF36B2DC" Foreground="White" Width="165" Height="34"/>
                     <ListBox x:Name="lstResult" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,233,100,10" Grid.ColumnSpan="3"/>
                 </Grid>
             </TabItem>
