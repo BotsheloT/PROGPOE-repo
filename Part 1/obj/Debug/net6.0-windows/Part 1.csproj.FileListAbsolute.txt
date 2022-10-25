@@ -1,0 +1,84 @@
+C:\Users\lab_services_student\Documents\Part 1\Part 1\bin\Debug\net6.0-windows\Part 1.exe
+C:\Users\lab_services_student\Documents\Part 1\Part 1\bin\Debug\net6.0-windows\Part 1.deps.json
+C:\Users\lab_services_student\Documents\Part 1\Part 1\bin\Debug\net6.0-windows\Part 1.runtimeconfig.json
+C:\Users\lab_services_student\Documents\Part 1\Part 1\bin\Debug\net6.0-windows\Part 1.dll
+C:\Users\lab_services_student\Documents\Part 1\Part 1\bin\Debug\net6.0-windows\Part 1.pdb
+C:\Users\lab_services_student\Documents\Part 1\Part 1\obj\Debug\net6.0-windows\Part 1.csproj.AssemblyReference.cache
+C:\Users\lab_services_student\Documents\Part 1\Part 1\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\lab_services_student\Documents\Part 1\Part 1\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\lab_services_student\Documents\Part 1\Part 1\obj\Debug\net6.0-windows\Part 1_MarkupCompile.cache
+C:\Users\lab_services_student\Documents\Part 1\Part 1\obj\Debug\net6.0-windows\Part 1_MarkupCompile.lref
+C:\Users\lab_services_student\Documents\Part 1\Part 1\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\lab_services_student\Documents\Part 1\Part 1\obj\Debug\net6.0-windows\Part 1.g.resources
+C:\Users\lab_services_student\Documents\Part 1\Part 1\obj\Debug\net6.0-windows\Part 1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lab_services_student\Documents\Part 1\Part 1\obj\Debug\net6.0-windows\Part 1.AssemblyInfoInputs.cache
+C:\Users\lab_services_student\Documents\Part 1\Part 1\obj\Debug\net6.0-windows\Part 1.AssemblyInfo.cs
+C:\Users\lab_services_student\Documents\Part 1\Part 1\obj\Debug\net6.0-windows\Part 1.csproj.CoreCompileInputs.cache
+C:\Users\lab_services_student\Documents\Part 1\Part 1\obj\Debug\net6.0-windows\Part 1.dll
+C:\Users\lab_services_student\Documents\Part 1\Part 1\obj\Debug\net6.0-windows\refint\Part 1.dll
+C:\Users\lab_services_student\Documents\Part 1\Part 1\obj\Debug\net6.0-windows\Part 1.pdb
+C:\Users\lab_services_student\Documents\Part 1\Part 1\obj\Debug\net6.0-windows\Part 1.genruntimeconfig.cache
+C:\Users\lab_services_student\Documents\Part 1\Part 1\obj\Debug\net6.0-windows\ref\Part 1.dll
+C:\Users\Thato\Downloads\Task1-repo-main\Task1-repo-main\Part 1\bin\Debug\net6.0-windows\Part 1.exe
+C:\Users\Thato\Downloads\Task1-repo-main\Task1-repo-main\Part 1\bin\Debug\net6.0-windows\Part 1.deps.json
+C:\Users\Thato\Downloads\Task1-repo-main\Task1-repo-main\Part 1\bin\Debug\net6.0-windows\Part 1.runtimeconfig.json
+C:\Users\Thato\Downloads\Task1-repo-main\Task1-repo-main\Part 1\bin\Debug\net6.0-windows\Part 1.dll
+C:\Users\Thato\Downloads\Task1-repo-main\Task1-repo-main\Part 1\bin\Debug\net6.0-windows\Part 1.pdb
+C:\Users\Thato\Downloads\Task1-repo-main\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\Part 1.csproj.AssemblyReference.cache
+C:\Users\Thato\Downloads\Task1-repo-main\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\Thato\Downloads\Task1-repo-main\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\Thato\Downloads\Task1-repo-main\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\Part 1_MarkupCompile.cache
+C:\Users\Thato\Downloads\Task1-repo-main\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\Part 1_MarkupCompile.lref
+C:\Users\Thato\Downloads\Task1-repo-main\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\Thato\Downloads\Task1-repo-main\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\Part 1.g.resources
+C:\Users\Thato\Downloads\Task1-repo-main\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\Part 1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Thato\Downloads\Task1-repo-main\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\Part 1.AssemblyInfoInputs.cache
+C:\Users\Thato\Downloads\Task1-repo-main\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\Part 1.AssemblyInfo.cs
+C:\Users\Thato\Downloads\Task1-repo-main\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\Part 1.csproj.CoreCompileInputs.cache
+C:\Users\Thato\Downloads\Task1-repo-main\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\Part 1.dll
+C:\Users\Thato\Downloads\Task1-repo-main\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\refint\Part 1.dll
+C:\Users\Thato\Downloads\Task1-repo-main\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\Part 1.pdb
+C:\Users\Thato\Downloads\Task1-repo-main\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\Part 1.genruntimeconfig.cache
+C:\Users\Thato\Downloads\Task1-repo-main\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\ref\Part 1.dll
+C:\Users\lab_services_student\Downloads\Task1-repo-main\Task1-repo-main\Part 1\bin\Debug\net6.0-windows\Part 1.exe
+C:\Users\lab_services_student\Downloads\Task1-repo-main\Task1-repo-main\Part 1\bin\Debug\net6.0-windows\Part 1.deps.json
+C:\Users\lab_services_student\Downloads\Task1-repo-main\Task1-repo-main\Part 1\bin\Debug\net6.0-windows\Part 1.runtimeconfig.json
+C:\Users\lab_services_student\Downloads\Task1-repo-main\Task1-repo-main\Part 1\bin\Debug\net6.0-windows\Part 1.dll
+C:\Users\lab_services_student\Downloads\Task1-repo-main\Task1-repo-main\Part 1\bin\Debug\net6.0-windows\Part 1.pdb
+C:\Users\lab_services_student\Downloads\Task1-repo-main\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\Part 1.csproj.AssemblyReference.cache
+C:\Users\lab_services_student\Downloads\Task1-repo-main\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\lab_services_student\Downloads\Task1-repo-main\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\lab_services_student\Downloads\Task1-repo-main\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\Part 1_MarkupCompile.cache
+C:\Users\lab_services_student\Downloads\Task1-repo-main\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\Part 1_MarkupCompile.lref
+C:\Users\lab_services_student\Downloads\Task1-repo-main\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\lab_services_student\Downloads\Task1-repo-main\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\Part 1.g.resources
+C:\Users\lab_services_student\Downloads\Task1-repo-main\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\Part 1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lab_services_student\Downloads\Task1-repo-main\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\Part 1.AssemblyInfoInputs.cache
+C:\Users\lab_services_student\Downloads\Task1-repo-main\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\Part 1.AssemblyInfo.cs
+C:\Users\lab_services_student\Downloads\Task1-repo-main\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\Part 1.csproj.CoreCompileInputs.cache
+C:\Users\lab_services_student\Downloads\Task1-repo-main\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\Part 1.dll
+C:\Users\lab_services_student\Downloads\Task1-repo-main\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\refint\Part 1.dll
+C:\Users\lab_services_student\Downloads\Task1-repo-main\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\Part 1.pdb
+C:\Users\lab_services_student\Downloads\Task1-repo-main\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\Part 1.genruntimeconfig.cache
+C:\Users\lab_services_student\Downloads\Task1-repo-main\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\ref\Part 1.dll
+C:\Users\lab_services_student\Desktop\Task 2\Task1-repo-main\Part 1\bin\Debug\net6.0-windows\Part 1.exe
+C:\Users\lab_services_student\Desktop\Task 2\Task1-repo-main\Part 1\bin\Debug\net6.0-windows\Part 1.deps.json
+C:\Users\lab_services_student\Desktop\Task 2\Task1-repo-main\Part 1\bin\Debug\net6.0-windows\Part 1.runtimeconfig.json
+C:\Users\lab_services_student\Desktop\Task 2\Task1-repo-main\Part 1\bin\Debug\net6.0-windows\Part 1.dll
+C:\Users\lab_services_student\Desktop\Task 2\Task1-repo-main\Part 1\bin\Debug\net6.0-windows\Part 1.pdb
+C:\Users\lab_services_student\Desktop\Task 2\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\Part 1.csproj.AssemblyReference.cache
+C:\Users\lab_services_student\Desktop\Task 2\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\lab_services_student\Desktop\Task 2\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\lab_services_student\Desktop\Task 2\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\Part 1_MarkupCompile.cache
+C:\Users\lab_services_student\Desktop\Task 2\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\Part 1_MarkupCompile.lref
+C:\Users\lab_services_student\Desktop\Task 2\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\lab_services_student\Desktop\Task 2\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\Part 1.g.resources
+C:\Users\lab_services_student\Desktop\Task 2\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\Part 1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lab_services_student\Desktop\Task 2\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\Part 1.AssemblyInfoInputs.cache
+C:\Users\lab_services_student\Desktop\Task 2\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\Part 1.AssemblyInfo.cs
+C:\Users\lab_services_student\Desktop\Task 2\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\Part 1.csproj.CoreCompileInputs.cache
+C:\Users\lab_services_student\Desktop\Task 2\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\Part 1.dll
+C:\Users\lab_services_student\Desktop\Task 2\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\refint\Part 1.dll
+C:\Users\lab_services_student\Desktop\Task 2\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\Part 1.pdb
+C:\Users\lab_services_student\Desktop\Task 2\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\Part 1.genruntimeconfig.cache
+C:\Users\lab_services_student\Desktop\Task 2\Task1-repo-main\Part 1\obj\Debug\net6.0-windows\ref\Part 1.dll
