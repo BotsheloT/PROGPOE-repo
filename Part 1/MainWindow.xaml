@@ -81,14 +81,15 @@
             <TabItem Header="Replace Books">
                 <Grid Background="White">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="14*"/>
-                        <ColumnDefinition Width="8*"/>
-                        <ColumnDefinition Width="773*"/>
+                        <ColumnDefinition Width="7*"/>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="70*"/>
+                        <ColumnDefinition Width="316*"/>
                     </Grid.ColumnDefinitions>
-                    <ListBox x:Name="lsbOutput" Grid.Column="2" Margin="32,52,414,100" AllowDrop="True" MouseMove="lstUnsorted_MouseMove" Drop="lstUnsorted_Drop" />
-                    <ListBox x:Name="lsbResult" Grid.Column="2" Margin="386,52,60,100" AllowDrop="True" MouseMove="lstSorted_MouseMove" Drop="lstSorted_Drop" RenderTransformOrigin="0.52,0.626"/>
-                    <Button x:Name="btnHelp" Grid.Column="2" Content="?" HorizontalAlignment="Left" Margin="712,12,0,0" VerticalAlignment="Top" Width="35" Height="35" Background="#FFB5B5B5" BorderBrush="#FFB5B5B5" FontWeight="Bold" FontFamily="Arial Black" Click="btnHelp_Click"/>
-                    <Button x:Name="btnCheck" Grid.Column="2" Content="Check" HorizontalAlignment="Center" Margin="0,328,0,0" VerticalAlignment="Top" Height="45" Width="300" Foreground="White" BorderBrush="#FF36B2DC" Background="#FF36B2DC" FontFamily="Arial" FontWeight="Bold" Click="btnCheck_Click"/>
+                    <ListBox x:Name="lsbOutput" Grid.Column="2" Margin="32,52,414,100" AllowDrop="True" MouseMove="lstUnsorted_MouseMove" Drop="lstUnsorted_Drop" Grid.ColumnSpan="2" />
+                    <ListBox x:Name="lsbResult" Grid.Column="3" Margin="246,52,60,100" AllowDrop="True" MouseMove="lstSorted_MouseMove" Drop="lstSorted_Drop" RenderTransformOrigin="0.52,0.626"/>
+                    <Button x:Name="btnHelp" Grid.Column="3" Content="?" HorizontalAlignment="Left" Margin="572,12,0,0" VerticalAlignment="Top" Width="35" Height="35" Background="#FFB5B5B5" BorderBrush="#FFB5B5B5" FontWeight="Bold" FontFamily="Arial Black" Click="btnHelp_Click"/>
+                    <Button x:Name="btnCheck" Grid.Column="3" Content="Check" HorizontalAlignment="Left" Margin="96,328,0,0" VerticalAlignment="Top" Height="45" Width="300" Foreground="White" BorderBrush="#FF36B2DC" Background="#FF36B2DC" FontFamily="Arial" FontWeight="Bold" Click="btnCheck_Click"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Identify Areas">
@@ -102,9 +103,10 @@
                     <ListBox x:Name="lstCallNums" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,22,584,184" Grid.ColumnSpan="3"/>
                     <ListBox x:Name="lstDescriptions" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="187,22,297,184" Grid.Column="2"/>
                     <Button x:Name="btnStart" Grid.Column="2" Content="Start New Test" HorizontalAlignment="Left" Margin="419,22,0,0" VerticalAlignment="Top" Background="#FF36B2DC" BorderBrush="#FF36B2DC" Height="35" Width="165" Foreground="White" Click="btnStart_Click"/>
-                    <Button x:Name="btnMove" Grid.Column="2" Content="Select Answer" HorizontalAlignment="Left" Margin="419,87,0,0" VerticalAlignment="Top" Background="#FF36B2DC" BorderBrush="#FF36B2DC" Foreground="White" Width="165" Height="35" Click="btnMove_Click"/>
-                    <Button x:Name="btnResullts" Grid.Column="2" Content="Finish" HorizontalAlignment="Left" Margin="419,152,0,0" VerticalAlignment="Top" Background="#FF36B2DC" BorderBrush="#FF36B2DC" Foreground="White" Width="165" Height="34"/>
+                    <Button x:Name="btnMove" Grid.Column="2" Content="Select Answer" HorizontalAlignment="Left" Margin="419,75,0,0" VerticalAlignment="Top" Background="#FF36B2DC" BorderBrush="#FF36B2DC" Foreground="White" Width="165" Height="35" Click="btnMove_Click"/>
+                    <Button x:Name="btnResullts" Grid.Column="2" Content="Finish" HorizontalAlignment="Left" Margin="419,188,0,0" VerticalAlignment="Top" Background="#FF36B2DC" BorderBrush="#FF36B2DC" Foreground="White" Width="165" Height="34" Click="btnResullts_Click"/>
                     <ListBox x:Name="lstResult" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,233,100,10" Grid.ColumnSpan="3"/>
+                    <Button x:Name="btnChecker" Grid.Column="2" Content="Check Answers" HorizontalAlignment="Left" Margin="419,135,0,0" VerticalAlignment="Top" Height="35" Width="165" Background="#FF36B2DC" BorderBrush="#FF36B2DC" Foreground="White" Click="btnChecker_Click"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Find Call Numbers">

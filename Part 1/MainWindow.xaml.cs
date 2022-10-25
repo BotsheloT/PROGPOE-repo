@@ -78,6 +78,12 @@ namespace Part_1
         public static List<string> callNums = new List<string>();
         public static List<string> Descripts = new List<string>();
 
+        //User list for callNumbers and Descriptions
+        public static Dictionary<string,string> userAnswers = new Dictionary<string,string>();
+
+        //Dictionary for user comparison
+        public static Dictionary<string, string> sortedAreas = new Dictionary<string, string>();
+
         //Variable for random evaluation
         public static int turn = rnd.Next(0, 100);
 
@@ -306,6 +312,12 @@ namespace Part_1
             Descripts.Clear();
             ranCallNums.Clear();
             ranDescripts.Clear();
+            userAnswers.Clear();
+
+            //Clearing listBoxes
+            lstCallNums.Items.Clear();
+            lstDescriptions.Items.Clear();
+            lstResult.Items.Clear();
 
             //Pupulating the default lists for
             foreach (string keys in areas.Keys)
@@ -317,8 +329,7 @@ namespace Part_1
             {
                 Descripts.Add(vals);
             }
-
-           
+ 
                 int randomz = rnd.Next(0, callNums.Count);
                 int randz;
                 int counter = 1;
@@ -335,7 +346,7 @@ namespace Part_1
 
                 while (count <= 3)
                 {
-                    randz = rnd.Next(0, Descripts.Count);
+                    randz = rnd.Next(0, Descripts.Count-1);
                     Descripts.Remove(Descripts[randz]);
                     ranDescripts.Add(Descripts[randz]);
                     count++;
@@ -352,14 +363,60 @@ namespace Part_1
             }
 
             
-
         }
 
         private void btnMove_Click(object sender, RoutedEventArgs e)
         {
-            lstResult.Items.Add(lstCallNums.SelectedItem + ": " + lstDescriptions.SelectedItem);
+            lstResult.Items.Add(lstCallNums.SelectedItem + "-" + lstDescriptions.SelectedItem);
             lstCallNums.Items.Remove(lstCallNums.SelectedItem);
             lstDescriptions.Items.Remove(lstDescriptions.SelectedItem);
+        }
+
+        private void btnChecker_Click(object sender, RoutedEventArgs e)
+        {
+            //Calculating points and comparing user answers with sorted list
+            if (lstResult.Items.Count == 4)
+            {
+                lstResult.Items.Add("==========================================");
+                lstResult.Items.Add("Correct Answers:");
+
+                for (int i = 0; i < 4; i++)
+                {
+                    string item = lstResult.Items[i].ToString();
+                    int index = item.IndexOf("-");
+                    string calls = Convert.ToString(item.Substring(0,index));
+                    string descr = item.Substring(index + 1);
+
+                    userAnswers.Add(calls, descr);
+                }
+
+                foreach (KeyValuePair<string, string> stuff in userAnswers)
+                {
+
+                    if ((areas.TryGetValue(stuff.Key, out string value) && (value.Equals(stuff.Value))))
+                    {
+                        points++;
+                        lstResult.Items.Add(stuff.Key + "-" + value);
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Not all answers were correct");
+                        lstResult.Items.Add(stuff.Key + "-" + value);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please finish matching the columns");
+            }
+        }
+
+        private void btnResullts_Click(object sender, RoutedEventArgs e)
+        {
+            lstResult.Items.Add("=========================================");
+            int total = rounds * 4;
+            lstResult.Items.Add("Total points: " +  Convert.ToString( points) + " / " + Convert.ToString( total));
         }
     }
 }
