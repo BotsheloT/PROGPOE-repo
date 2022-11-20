@@ -111,7 +111,8 @@ namespace Part_1
 
         private void btnFind_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Please Select Replace Books or Identify Areas Option");
+            //Changing tab focus to correct page
+            Menu.SelectedIndex = 3;
         }
 
         private void btnReplace_Click(object sender, RoutedEventArgs e)
@@ -183,14 +184,14 @@ namespace Part_1
             
 
             //Disabling other option and switching to Replace books Feature
-            btnFind.IsEnabled = false;
+            
             Menu.SelectedIndex = 1;
         }
 
         private void btnIdentify_Click(object sender, RoutedEventArgs e)
         {
             //Disabling other option and switching to Identifying Areas Feature
-            btnFind.IsEnabled = false;
+            
             Menu.SelectedIndex = 2;
         }
 

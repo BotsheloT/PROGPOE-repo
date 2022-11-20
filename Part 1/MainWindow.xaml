@@ -110,7 +110,17 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Find Call Numbers">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="86*"/>
+                        <ColumnDefinition Width="311*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="btnHelper" Content="?" HorizontalAlignment="Left" Margin="552,25,0,0" VerticalAlignment="Top" Width="35" Height="35" FontWeight="Bold" FontFamily="Arial Black" Background="#FFB5B5B5" Grid.Column="1"/>
+                    <Button x:Name="btnChecking" Content="Check" HorizontalAlignment="Left" Margin="86,89,0,0" VerticalAlignment="Top" Height="34" Grid.ColumnSpan="2" Width="165" Background="#FF36B2DC" BorderBrush="#FF36B2DC" Foreground="White"/>
+                    <TextBox x:Name="txtData" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="86,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" Height="20"/>
+                    <ListBox Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="126,42,126,51"/>
+                    <Label x:Name="lblFeedback" Content="Points: " HorizontalAlignment="Left" Margin="87,324,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="18" Grid.ColumnSpan="2" Width="164"/>
+                </Grid>
             </TabItem>
         </TabControl>
     </Grid>
