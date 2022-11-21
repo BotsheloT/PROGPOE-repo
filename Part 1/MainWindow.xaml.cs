@@ -91,6 +91,26 @@ namespace Part_1
         public static int rounds = 0;
         public static int points = 0;
 
+        //***************************************************************************************
+
+        //Variables for gamification feature
+        int qPoints = 0;
+        int qRounds = 1;
+
+        //Varaibles for random numbers in two other levels
+        public static int slRan = rnd.Next(0, 2);
+        public static int tlRan = rnd.Next(0, 1);
+
+        //Array for reading from textfile
+        public static string[] libraryData;
+
+        //Declaration for Library tree
+        Library<string> tree = new Library<string>();
+
+        //Lists for user options
+        public static List<string> pAnswers = new List<string>();
+        public static List<string> options = new List<string>();
+        public static List<string> userOptions = new List<string>();
 
         //Sorting method for List
         private void bubbleSort(List<string> stList)
@@ -109,8 +129,253 @@ namespace Part_1
             }
         }
 
+        private void quizzer(LibraryNode<string> quizTree)
+        {
+            for (int a = 0; a < 10; a++)
+            {
+                //p
+                for (int b = 0; b < 3; b++)
+                {
+                    for (int c = 0; c < 2; c++)
+                    {
+
+                    }
+                }
+            }
+        }
+
         private void btnFind_Click(object sender, RoutedEventArgs e)
         {
+            //string to read data from file
+            libraryData = System.IO.File.ReadAllLines(@"C:\Users\lab_services_student\Desktop\PROG POE\Task1-repo-main\dds.txt");
+
+            //Populating tree for library data
+            tree.Root = new LibraryNode<string>() {Data = "DDS System" };
+            tree.Root.Children = new List<LibraryNode<string>>
+            {
+                new LibraryNode<string>() {Data = libraryData[0], Parent = tree.Root},
+                new LibraryNode<string>() {Data = libraryData[10], Parent = tree.Root},
+                new LibraryNode<string>() {Data = libraryData[20], Parent = tree.Root},
+                new LibraryNode<string>() {Data = libraryData[30], Parent = tree.Root},
+                new LibraryNode<string>() {Data = libraryData[40], Parent = tree.Root},
+                new LibraryNode<string>() {Data = libraryData[50], Parent = tree.Root},
+                new LibraryNode<string>() {Data = libraryData[60], Parent = tree.Root},
+                new LibraryNode<string>() {Data = libraryData[70], Parent = tree.Root},
+                new LibraryNode<string>() {Data = libraryData[80], Parent = tree.Root},
+                new LibraryNode<string>() {Data = libraryData[90], Parent = tree.Root}
+            };
+            tree.Root.Children[0].Children = new List<LibraryNode<string>>()
+            {
+                new LibraryNode<string>() {Data = libraryData[1], Parent = tree.Root.Children[0]},
+                new LibraryNode<string>() {Data = libraryData[4], Parent = tree.Root.Children[0]},
+                new LibraryNode<string>() {Data = libraryData[7], Parent = tree.Root.Children[0]}
+            };
+            tree.Root.Children[0].Children[0].Children = new List<LibraryNode<string>>
+            {
+                 new LibraryNode<string>() {Data = libraryData[2], Parent = tree.Root.Children[0].Children[0]},
+                 new LibraryNode<string>() {Data = libraryData[3], Parent = tree.Root.Children[0].Children[0]}
+            };
+            tree.Root.Children[0].Children[1].Children = new List<LibraryNode<string>>
+            {
+                 new LibraryNode<string>() {Data = libraryData[5], Parent = tree.Root.Children[0].Children[1]},
+                 new LibraryNode<string>() {Data = libraryData[6], Parent = tree.Root.Children[0].Children[1]}
+            };
+            tree.Root.Children[0].Children[2].Children = new List<LibraryNode<string>>
+            {
+                 new LibraryNode<string>() {Data = libraryData[8], Parent = tree.Root.Children[0].Children[2]},
+                 new LibraryNode<string>() {Data = libraryData[9], Parent = tree.Root.Children[0].Children[2]}
+            };
+            tree.Root.Children[1].Children = new List<LibraryNode<string>>()
+            {
+                new LibraryNode<string>() {Data = libraryData[11], Parent = tree.Root.Children[1]},
+                new LibraryNode<string>() {Data = libraryData[14], Parent = tree.Root.Children[1]},
+                new LibraryNode<string>() {Data = libraryData[17], Parent = tree.Root.Children[1]}
+            };
+            tree.Root.Children[1].Children[0].Children = new List<LibraryNode<string>>
+            {
+                 new LibraryNode<string>() {Data = libraryData[12], Parent = tree.Root.Children[1].Children[0]},
+                 new LibraryNode<string>() {Data = libraryData[13], Parent = tree.Root.Children[1].Children[0]}
+            };
+            tree.Root.Children[1].Children[1].Children = new List<LibraryNode<string>>
+            {
+                 new LibraryNode<string>() {Data = libraryData[15], Parent = tree.Root.Children[1].Children[1]},
+                 new LibraryNode<string>() {Data = libraryData[16], Parent = tree.Root.Children[1].Children[1]}
+            };
+            tree.Root.Children[1].Children[2].Children = new List<LibraryNode<string>>
+            {
+                 new LibraryNode<string>() {Data = libraryData[18], Parent = tree.Root.Children[1].Children[2]},
+                 new LibraryNode<string>() {Data = libraryData[19], Parent = tree.Root.Children[1].Children[2]}
+            };
+            tree.Root.Children[2].Children = new List<LibraryNode<string>>()
+            {
+                new LibraryNode<string>() {Data = libraryData[21], Parent = tree.Root.Children[2]},
+                new LibraryNode<string>() {Data = libraryData[24], Parent = tree.Root.Children[2]},
+                new LibraryNode<string>() {Data = libraryData[27], Parent = tree.Root.Children[2]}
+            };
+            tree.Root.Children[2].Children[0].Children = new List<LibraryNode<string>>
+            {
+                 new LibraryNode<string>() {Data = libraryData[22], Parent = tree.Root.Children[2].Children[0]},
+                 new LibraryNode<string>() {Data = libraryData[23], Parent = tree.Root.Children[2].Children[0]}
+            };
+            tree.Root.Children[2].Children[1].Children = new List<LibraryNode<string>>
+            {
+                 new LibraryNode<string>() {Data = libraryData[25], Parent = tree.Root.Children[2].Children[1]},
+                 new LibraryNode<string>() {Data = libraryData[26], Parent = tree.Root.Children[2].Children[1]}
+            };
+            tree.Root.Children[2].Children[2].Children = new List<LibraryNode<string>>
+            {
+                 new LibraryNode<string>() {Data = libraryData[28], Parent = tree.Root.Children[2].Children[2]},
+                 new LibraryNode<string>() {Data = libraryData[29], Parent = tree.Root.Children[2].Children[2]}
+            };
+
+            tree.Root.Children[3].Children = new List<LibraryNode<string>>()
+            {
+                new LibraryNode<string>() {Data = libraryData[31], Parent = tree.Root.Children[3]},
+                new LibraryNode<string>() {Data = libraryData[34], Parent = tree.Root.Children[3]},
+                new LibraryNode<string>() {Data = libraryData[37], Parent = tree.Root.Children[3]}
+            };
+            tree.Root.Children[3].Children[0].Children = new List<LibraryNode<string>>
+            {
+                 new LibraryNode<string>() {Data = libraryData[32], Parent = tree.Root.Children[3].Children[0]},
+                 new LibraryNode<string>() {Data = libraryData[33], Parent = tree.Root.Children[3].Children[0]}
+            };
+            tree.Root.Children[3].Children[1].Children = new List<LibraryNode<string>>
+            {
+                 new LibraryNode<string>() {Data = libraryData[35], Parent = tree.Root.Children[3].Children[1]},
+                 new LibraryNode<string>() {Data = libraryData[36], Parent = tree.Root.Children[3].Children[1]}
+            };
+            tree.Root.Children[3].Children[2].Children = new List<LibraryNode<string>>
+            {
+                 new LibraryNode<string>() {Data = libraryData[38], Parent = tree.Root.Children[3].Children[2]},
+                 new LibraryNode<string>() {Data = libraryData[39], Parent = tree.Root.Children[3].Children[2]}
+            };
+            tree.Root.Children[4].Children = new List<LibraryNode<string>>()
+            {
+                new LibraryNode<string>() {Data = libraryData[41], Parent = tree.Root.Children[4]},
+                new LibraryNode<string>() {Data = libraryData[44], Parent = tree.Root.Children[4]},
+                new LibraryNode<string>() {Data = libraryData[47], Parent = tree.Root.Children[4]}
+            };
+            tree.Root.Children[4].Children[0].Children = new List<LibraryNode<string>>
+            {
+                 new LibraryNode<string>() {Data = libraryData[42], Parent = tree.Root.Children[4].Children[0]},
+                 new LibraryNode<string>() {Data = libraryData[43], Parent = tree.Root.Children[4].Children[0]}
+            };
+            tree.Root.Children[4].Children[1].Children = new List<LibraryNode<string>>
+            {
+                 new LibraryNode<string>() {Data = libraryData[45], Parent = tree.Root.Children[4].Children[1]},
+                 new LibraryNode<string>() {Data = libraryData[46], Parent = tree.Root.Children[4].Children[2]}
+            };
+            tree.Root.Children[4].Children[2].Children = new List<LibraryNode<string>>
+            {
+                 new LibraryNode<string>() {Data = libraryData[48], Parent = tree.Root.Children[4].Children[2]},
+                 new LibraryNode<string>() {Data = libraryData[49], Parent = tree.Root.Children[4].Children[2]}
+            };
+            tree.Root.Children[5].Children = new List<LibraryNode<string>>()
+            {
+                new LibraryNode<string>() {Data = libraryData[51], Parent = tree.Root.Children[5]},
+                new LibraryNode<string>() {Data = libraryData[54], Parent = tree.Root.Children[5]},
+                new LibraryNode<string>() {Data = libraryData[57], Parent = tree.Root.Children[5]}
+            };
+            tree.Root.Children[5].Children[0].Children = new List<LibraryNode<string>>
+            {
+                 new LibraryNode<string>() {Data = libraryData[52], Parent = tree.Root.Children[5].Children[0]},
+                 new LibraryNode<string>() {Data = libraryData[53], Parent = tree.Root.Children[5].Children[0]}
+            };
+            tree.Root.Children[5].Children[1].Children = new List<LibraryNode<string>>
+            {
+                 new LibraryNode<string>() {Data = libraryData[55], Parent = tree.Root.Children[5].Children[1]},
+                 new LibraryNode<string>() {Data = libraryData[56], Parent = tree.Root.Children[5].Children[1]}
+            };
+            tree.Root.Children[5].Children[2].Children = new List<LibraryNode<string>>
+            {
+                 new LibraryNode<string>() {Data = libraryData[58], Parent = tree.Root.Children[5].Children[2]},
+                 new LibraryNode<string>() {Data = libraryData[59], Parent = tree.Root.Children[5].Children[2]}
+            };
+            tree.Root.Children[6].Children = new List<LibraryNode<string>>()
+            {
+                new LibraryNode<string>() {Data = libraryData[61], Parent = tree.Root.Children[6]},
+                new LibraryNode<string>() {Data = libraryData[64], Parent = tree.Root.Children[6]},
+                new LibraryNode<string>() {Data = libraryData[67], Parent = tree.Root.Children[6]}
+            };
+            tree.Root.Children[6].Children[0].Children = new List<LibraryNode<string>>
+            {
+                 new LibraryNode<string>() {Data = libraryData[62], Parent = tree.Root.Children[6].Children[0]},
+                 new LibraryNode<string>() {Data = libraryData[63], Parent = tree.Root.Children[6].Children[0]}
+            };
+            tree.Root.Children[6].Children[1].Children = new List<LibraryNode<string>>
+            {
+                 new LibraryNode<string>() {Data = libraryData[65], Parent = tree.Root.Children[6].Children[1]},
+                 new LibraryNode<string>() {Data = libraryData[66], Parent = tree.Root.Children[6].Children[1]}
+            };
+            tree.Root.Children[6].Children[2].Children = new List<LibraryNode<string>>
+            {
+                 new LibraryNode<string>() {Data = libraryData[68], Parent = tree.Root.Children[6].Children[2]},
+                 new LibraryNode<string>() {Data = libraryData[69], Parent = tree.Root.Children[6].Children[2]}
+            };
+            tree.Root.Children[7].Children = new List<LibraryNode<string>>()
+            {
+                new LibraryNode<string>() {Data = libraryData[71], Parent = tree.Root.Children[7]},
+                new LibraryNode<string>() {Data = libraryData[74], Parent = tree.Root.Children[7]},
+                new LibraryNode<string>() {Data = libraryData[77], Parent = tree.Root.Children[7]}
+            };
+            tree.Root.Children[7].Children[0].Children = new List<LibraryNode<string>>
+            {
+                 new LibraryNode<string>() {Data = libraryData[72], Parent = tree.Root.Children[7].Children[0]},
+                 new LibraryNode<string>() {Data = libraryData[73], Parent = tree.Root.Children[7].Children[0]}
+            };
+            tree.Root.Children[7].Children[1].Children = new List<LibraryNode<string>>
+            {
+                 new LibraryNode<string>() {Data = libraryData[75], Parent = tree.Root.Children[7].Children[1]},
+                 new LibraryNode<string>() {Data = libraryData[76], Parent = tree.Root.Children[7].Children[1]}
+            };
+            tree.Root.Children[7].Children[2].Children = new List<LibraryNode<string>>
+            {
+                 new LibraryNode<string>() {Data = libraryData[78], Parent = tree.Root.Children[7].Children[2]},
+                 new LibraryNode<string>() {Data = libraryData[79], Parent = tree.Root.Children[7].Children[2]}
+            };
+            tree.Root.Children[8].Children = new List<LibraryNode<string>>()
+            {
+                new LibraryNode<string>() {Data = libraryData[81], Parent = tree.Root.Children[8]},
+                new LibraryNode<string>() {Data = libraryData[84], Parent = tree.Root.Children[8]},
+                new LibraryNode<string>() {Data = libraryData[87], Parent = tree.Root.Children[8]}
+            };
+            tree.Root.Children[8].Children[0].Children = new List<LibraryNode<string>>
+            {
+                 new LibraryNode<string>() {Data = libraryData[82], Parent = tree.Root.Children[8].Children[0]},
+                 new LibraryNode<string>() {Data = libraryData[83], Parent = tree.Root.Children[8].Children[0]}
+            };
+            tree.Root.Children[8].Children[1].Children = new List<LibraryNode<string>>
+            {
+                 new LibraryNode<string>() {Data = libraryData[85], Parent = tree.Root.Children[8].Children[1]},
+                 new LibraryNode<string>() {Data = libraryData[86], Parent = tree.Root.Children[8].Children[1]}
+            };
+            tree.Root.Children[8].Children[2].Children = new List<LibraryNode<string>>
+            {
+                 new LibraryNode<string>() {Data = libraryData[88], Parent = tree.Root.Children[8].Children[2]},
+                 new LibraryNode<string>() {Data = libraryData[89], Parent = tree.Root.Children[8].Children[2]}
+            };
+            tree.Root.Children[9].Children = new List<LibraryNode<string>>()
+            {
+                new LibraryNode<string>() {Data = libraryData[91], Parent = tree.Root.Children[9]},
+                new LibraryNode<string>() {Data = libraryData[94], Parent = tree.Root.Children[9]},
+                new LibraryNode<string>() {Data = libraryData[97], Parent = tree.Root.Children[9]}
+            };
+            tree.Root.Children[9].Children[0].Children = new List<LibraryNode<string>>
+            {
+                 new LibraryNode<string>() {Data = libraryData[92], Parent = tree.Root.Children[9].Children[0]},
+                 new LibraryNode<string>() {Data = libraryData[93], Parent = tree.Root.Children[9].Children[0]}
+            };
+            tree.Root.Children[9].Children[1].Children = new List<LibraryNode<string>>
+            {
+                 new LibraryNode<string>() {Data = libraryData[95], Parent = tree.Root.Children[9].Children[1]},
+                 new LibraryNode<string>() {Data = libraryData[96], Parent = tree.Root.Children[9].Children[1]}
+            };
+            tree.Root.Children[9].Children[2].Children = new List<LibraryNode<string>>
+            {
+                 new LibraryNode<string>() {Data = libraryData[98], Parent = tree.Root.Children[9].Children[2]},
+                 new LibraryNode<string>() {Data = libraryData[99], Parent = tree.Root.Children[9].Children[2]}
+            };
+
             //Changing tab focus to correct page
             Menu.SelectedIndex = 3;
         }
@@ -418,6 +683,11 @@ namespace Part_1
             lstResult.Items.Add("=========================================");
             int total = rounds * 4;
             lstResult.Items.Add("Total points: " +  Convert.ToString( points) + " / " + Convert.ToString( total));
+        }
+
+        private void btnChecking_Click(object sender, RoutedEventArgs e)
+        {
+               
         }
     }
 }

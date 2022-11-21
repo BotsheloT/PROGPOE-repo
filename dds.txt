@@ -1,0 +1,100 @@
+	000 General Knowledge
+	020 Library and information sciences
+	021 Library relationships
+	025 Library operations
+	050 General serials and their indexes
+	056 General serials & their indexes In Spanish and Portuguese
+	057 General serials & their indexes In Slavic languages
+	070 News, media, journalism, publishing
+	073 News, media, journalism, publishing In Central Europe in Germany
+	074 News, media, journalism, publishing In France and Monaco
+	100 Philosophy and Psychology
+	110 Metaphysics
+	111 Ontology
+	118 Force & Energy
+	140 Specific philosophical schools
+	142 Critical philosophy
+	145 Sensationalism
+	160 Logic
+	161 Induction
+	162 Deduction
+	200 Religion
+	210 Natural Theology
+	211 Concepts of God
+	215 Science and Religion
+	220 Bible
+	225 New Testament
+	228 Revelation
+	230 Christian theology
+	231 God
+	233 Humankind
+	300 Social Sciences
+	320 Political Sciences
+	323 Civil and Political Rights
+	324 The Political Process
+	340 Law
+	341 Political Law
+	345 Criminal Law
+	370 Education
+	373 Secondary Education
+	374 Adult Education
+	400 Languages
+	420 English and Old English
+	423 English Dictionaries
+	429 Old English
+	440 Romance Languages French
+	442 French etymology
+	443 French dictionaries
+	470 Italic Latin
+	475 Classical Latin grammar
+	748 classical Latin usage
+	500 Sciences
+	510 Mathematics
+	513 Arithmetic
+	515 Analysis
+	530 Physics
+	533 Gas mechanics
+	538 Magnetism
+	570 Life Sciences
+	574 Biology
+	576 Microbiology
+	600 Technology
+	620 Engineering and allied operations
+	621 Applied physics
+	622 Mining and related operations
+	630 Agriculture
+	635 Garden Crops
+	638 Insect Culture
+	670 Manufacturing
+	673 Nonferrous metals
+	677 Textiles
+	700 Arts and Recreation
+	750 Paintings & paintings
+	751 Colour
+	752 Human figures
+	780 Music
+	781 General Principals
+	785 Chamber Music
+	790 Recreational & Performing Arts
+	791 Public performances
+	794 Indoor games and skills
+	800 Literature
+	820 English and Old English Literatures
+	821 English Poetry
+	823 English Fiction
+	830 Literatures of Germanic languages
+	831 Early to 1517
+	837 German-American
+	840 Literatures of Romance Languages
+	847 French Canadian
+	848 Provencal
+	900 History and Geography
+	910 Geography and travel
+	911 Historical geography
+	916 Africa
+	930 History of ancient world
+	932 History of ancient world Egypt
+	934 History of ancient world India
+	960 General History of Africa
+	962 General History of Africa Egypt and Sudan
+	963 General History of Africa Ethiopia
