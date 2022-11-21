@@ -95,7 +95,7 @@ namespace Part_1
 
         //Variables for gamification feature
         int qPoints = 0;
-        int qRounds = 1;
+        int qRounds = 0;
 
         //Array for reading from textfile
         public static string[] libraryData;
@@ -142,12 +142,19 @@ namespace Part_1
 
         private void firstLQuiz()
         {
+            //clearing before population
+            firstQOptions.Clear();
+            options.Clear();
+
             //Varaibles for random numbers in three levels
             tLevel = rnd.Next(0, 9);
             mLevel = rnd.Next(0, 2);
             bLevel = rnd.Next(0, 1);
 
-            options = pAnswers;
+            foreach (string item in pAnswers)
+            {
+                options.Add(item);
+            }
 
                 //Getting User question and answer
                 bottom = tree.Root.Children[tLevel].Children[mLevel].Children[bLevel].Data;
@@ -190,6 +197,8 @@ namespace Part_1
                 {
                     lstbOut.Items.Add(option);
                 }
+
+            lblFeedback.Content = ("Points: " +  qPoints + "/" + qRounds);
                 
         }
 
@@ -215,6 +224,8 @@ namespace Part_1
             {
                 lstbOut.Items.Add(option);
             }
+
+            lblFeedback.Content = ("Points: " + qPoints + "/" + qRounds);
         }
 
         private void btnFind_Click(object sender, RoutedEventArgs e)
@@ -770,54 +781,64 @@ namespace Part_1
 
         private void btnChecking_Click(object sender, RoutedEventArgs e)
         {
-            if (lstbOut.SelectedIndex < 0)
+            if (qRounds <= 9)
             {
-                MessageBox.Show("Please select an option!");
+                if (lstbOut.SelectedIndex < 0)
+                {
+                    MessageBox.Show("Please select an option!");
+                }
+                else
+                {
+                    if (lstbOut.Items[0] == firstQOptions[0])
+                    {
+                        if (lstbOut.SelectedItem == fAnswer)
+                        {
+                            qPoints++;
+                            qRounds++;
+                            lstbOut.Items.Clear();
+                            secondLQuiz();
+                        }
+                        else
+                        {
+                            MessageBox.Show("WRONG ANSWER! EMOTIONAL DAMAGE!");
+                            qRounds++;
+                            lstbOut.Items.Clear();
+                            txtData.Clear();
+                            firstLQuiz();
+                        }
+                    }
+                    else if (lstbOut.Items[0] == secondQOptions[0])
+                    {
+                        if (lstbOut.SelectedItem == sAnswer)
+                        {
+                            qPoints++;
+                            qRounds++;
+                            lstbOut.Items.Clear();
+                            txtData.Clear();
+                            secondQOptions.Clear();
+                            firstQOptions.Clear();
+                            firstLQuiz();
+                        }
+                        else
+                        {
+                            MessageBox.Show("WRONG ANSWER! EMOTIONAL DAMAGE!");
+                            qRounds++;
+                            lstbOut.Items.Clear();
+                            txtData.Clear();
+                            secondQOptions.Clear();
+                            firstLQuiz();
+                        }
+                    }
+                }
             }
             else
             {
-                if (lstbOut.Items[0] == firstQOptions[0])
-                {
-                    if (lstbOut.SelectedItem == fAnswer)
-                    {
-                        qPoints++;
-                        qRounds++;
-                        lstbOut.Items.Clear();                                          
-                        secondLQuiz();
-                    }
-                    else
-                    {
-                        MessageBox.Show("WRONG ANSWER! EMOTIONAL DAMAGE!");
-                        qRounds++;
-                        lstbOut.Items.Clear();
-                        txtData.Clear();
-                        firstQOptions.Clear();
-                        firstLQuiz();
-                    }
-                }
-                else if(lstbOut.Items[0] == secondQOptions[0])
-                {
-                    if (lstbOut.SelectedItem == sAnswer)
-                    {
-                        qPoints++;
-                        qRounds++;
-                        lstbOut.Items.Clear();
-                        txtData.Clear();
-                        secondQOptions.Clear();
-                        firstQOptions.Clear();
-                        firstLQuiz();
-                    }
-                    else
-                    {
-                        MessageBox.Show("WRONG ANSWER! EMOTIONAL DAMAGE!");
-                        qRounds++;
-                        lstbOut.Items.Clear();
-                        txtData.Clear();
-                        secondQOptions.Clear();                        
-                        firstLQuiz();
-                    }
-                }
-            } 
+                MessageBox.Show("You got " + qPoints + " answers correct out of "+ qRounds);
+                this.Close();
+            }
+
         }
+
+     
     }
 }
