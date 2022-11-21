@@ -97,10 +97,6 @@ namespace Part_1
         int qPoints = 0;
         int qRounds = 1;
 
-        //Varaibles for random numbers in two other levels
-        public static int slRan = rnd.Next(0, 2);
-        public static int tlRan = rnd.Next(0, 1);
-
         //Array for reading from textfile
         public static string[] libraryData;
 
@@ -108,9 +104,18 @@ namespace Part_1
         Library<string> tree = new Library<string>();
 
         //Lists for user options
-        public static List<string> pAnswers = new List<string>();
         public static List<string> options = new List<string>();
-        public static List<string> userOptions = new List<string>();
+        public static List<string> pAnswers = new List<string>();
+        public static List<string> firstQOptions = new List<string>();
+        public static List<string> secondQOptions = new List<string>();
+
+        public static string top;
+        public static string middle;
+        public static string bottom;
+
+        //String for user answer
+        public static string fAnswer;
+        public static string sAnswer;
 
         //Sorting method for List
         private void bubbleSort(List<string> stList)
@@ -129,18 +134,70 @@ namespace Part_1
             }
         }
 
-        private void quizzer(LibraryNode<string> quizTree)
-        {
-            for (int a = 0; a < 10; a++)
-            {
-                //p
-                for (int b = 0; b < 3; b++)
-                {
-                    for (int c = 0; c < 2; c++)
-                    {
+        private void firstLQuiz()
+        {           
+            //Varaibles for random numbers in three levels
+            int tLevel = rnd.Next(0, 9);
+            int mLevel = rnd.Next(0, 2);
+            int bLevel = rnd.Next(0, 1);
 
-                    }
+            //First three items in second level answers
+            for (int j = 0; j < 3; j++)
+            {
+                secondQOptions.Add(tree.Root.Children[tLevel].Children[j].Data);
+            }
+
+            //Other random numbers
+            int lastRan = rnd.Next(0, 9);
+            int finalRan = rnd.Next(0, 2);
+
+            //Fourth item in second level answers
+            secondQOptions.Add(tree.Root.Children[lastRan].Children[finalRan].Data);
+
+            options = pAnswers;
+
+                //Getting User question and answer
+                bottom = tree.Root.Children[tLevel].Children[mLevel].Children[bLevel].Data;
+                middle = tree.Root.Children[tLevel].Children[mLevel].Data;
+                top = tree.Root.Children[tLevel].Data;
+
+                //String for user question
+                string uQuestion = bottom.Substring(4);
+
+                //public string to check answers
+                fAnswer = top;
+                sAnswer = middle;
+
+                firstQOptions.Add(top);
+                options.Remove(top);
+
+                //
+                while (firstQOptions.Count < 4)
+                {
+                    //Variable for random numbers for 3 other options
+                    int otherThree = rnd.Next(0, options.Count);
+                    firstQOptions.Add(options[otherThree]);
+                    options.Remove(options[otherThree]);
                 }
+
+                //Sorting of options for user
+                bubbleSort(firstQOptions);
+                bubbleSort(secondQOptions);
+
+                //Displaying user options and questions in tab
+                txtData.Text = uQuestion;
+                foreach (string option in firstQOptions)
+                {
+                    lstbOut.Items.Add(option);
+                }
+                
+        }
+
+        public void secondLQuiz()
+        {
+            foreach (string option in secondQOptions)
+            {
+                lstbOut.Items.Add(option);
             }
         }
 
@@ -376,8 +433,18 @@ namespace Part_1
                  new LibraryNode<string>() {Data = libraryData[99], Parent = tree.Root.Children[9].Children[2]}
             };
 
+            //Populating List for all possible top and middle level options
+            for (int  i = 0; i < 10; i++)
+            {
+                pAnswers.Add(tree.Root.Children[i].Data);
+            }
+
+            firstLQuiz();
+
             //Changing tab focus to correct page
             Menu.SelectedIndex = 3;
+
+
         }
 
         private void btnReplace_Click(object sender, RoutedEventArgs e)
@@ -687,7 +754,57 @@ namespace Part_1
 
         private void btnChecking_Click(object sender, RoutedEventArgs e)
         {
-               
+            if (lstbOut.SelectedIndex < 0)
+            {
+                MessageBox.Show("Please select an option!");
+            }
+            else
+            {
+                if (lstbOut.Items[0] == firstQOptions[0])
+                {
+                    if (lstbOut.SelectedItem == fAnswer)
+                    {
+                        qPoints++;
+                        qRounds++;
+                        lstbOut.Items.Clear();
+                        firstQOptions.Clear();
+                        options.Clear();
+                        secondLQuiz();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("WRONG ANSWER! EMOTIONAL DAMAGE!");
+                        qRounds++;
+                        lstbOut.Items.Clear();
+                        txtData.Clear();
+                        firstQOptions.Clear();
+                        options.Clear();
+                        firstLQuiz();
+                    }
+                }
+                else if(lstbOut.Items[0] == secondQOptions[0])
+                {
+                    if (lstbOut.SelectedItem == sAnswer)
+                    {
+                        qPoints++;
+                        qRounds++;
+                        lstbOut.Items.Clear();
+                        txtData.Clear();
+                        secondQOptions.Clear();
+                        firstLQuiz();
+                    }
+                    else
+                    {
+                        MessageBox.Show("WRONG ANSWER! EMOTIONAL DAMAGE!");
+                        qRounds++;
+                        lstbOut.Items.Clear();
+                        txtData.Clear();
+                        secondQOptions.Clear();                        
+                        firstLQuiz();
+                    }
+                }
+            } 
         }
     }
 }
