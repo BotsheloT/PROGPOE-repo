@@ -103,6 +103,12 @@ namespace Part_1
         //Declaration for Library tree
         Library<string> tree = new Library<string>();
 
+        //Random number for top level values
+        public static int tLevel;
+        public static int mLevel;
+        public static int bLevel;
+
+
         //Lists for user options
         public static List<string> options = new List<string>();
         public static List<string> pAnswers = new List<string>();
@@ -135,24 +141,11 @@ namespace Part_1
         }
 
         private void firstLQuiz()
-        {           
+        {
             //Varaibles for random numbers in three levels
-            int tLevel = rnd.Next(0, 9);
-            int mLevel = rnd.Next(0, 2);
-            int bLevel = rnd.Next(0, 1);
-
-            //First three items in second level answers
-            for (int j = 0; j < 3; j++)
-            {
-                secondQOptions.Add(tree.Root.Children[tLevel].Children[j].Data);
-            }
-
-            //Other random numbers
-            int lastRan = rnd.Next(0, 9);
-            int finalRan = rnd.Next(0, 2);
-
-            //Fourth item in second level answers
-            secondQOptions.Add(tree.Root.Children[lastRan].Children[finalRan].Data);
+            tLevel = rnd.Next(0, 9);
+            mLevel = rnd.Next(0, 2);
+            bLevel = rnd.Next(0, 1);
 
             options = pAnswers;
 
@@ -176,13 +169,20 @@ namespace Part_1
                 {
                     //Variable for random numbers for 3 other options
                     int otherThree = rnd.Next(0, options.Count);
+                try
+                {
                     firstQOptions.Add(options[otherThree]);
+                }
+                catch(Exception e)
+                {
+                    MessageBox.Show(otherThree.ToString());
+                }
+                    
                     options.Remove(options[otherThree]);
                 }
 
                 //Sorting of options for user
                 bubbleSort(firstQOptions);
-                bubbleSort(secondQOptions);
 
                 //Displaying user options and questions in tab
                 txtData.Text = uQuestion;
@@ -195,6 +195,22 @@ namespace Part_1
 
         public void secondLQuiz()
         {
+            //Sorting list
+            bubbleSort(secondQOptions);
+
+            //First three items in second level answers
+            for (int j = 0; j < 3; j++)
+            {
+                secondQOptions.Add(tree.Root.Children[tLevel].Children[j].Data);
+            }
+
+            //Other random numbers
+            int lastRan = rnd.Next(0, 9);
+            int finalRan = rnd.Next(0, 2);
+
+            //Fourth item in second level answers
+            secondQOptions.Add(tree.Root.Children[lastRan].Children[finalRan].Data);
+
             foreach (string option in secondQOptions)
             {
                 lstbOut.Items.Add(option);
@@ -766,11 +782,8 @@ namespace Part_1
                     {
                         qPoints++;
                         qRounds++;
-                        lstbOut.Items.Clear();
-                        firstQOptions.Clear();
-                        options.Clear();
+                        lstbOut.Items.Clear();                                          
                         secondLQuiz();
-
                     }
                     else
                     {
@@ -779,7 +792,6 @@ namespace Part_1
                         lstbOut.Items.Clear();
                         txtData.Clear();
                         firstQOptions.Clear();
-                        options.Clear();
                         firstLQuiz();
                     }
                 }
@@ -792,6 +804,7 @@ namespace Part_1
                         lstbOut.Items.Clear();
                         txtData.Clear();
                         secondQOptions.Clear();
+                        firstQOptions.Clear();
                         firstLQuiz();
                     }
                     else
